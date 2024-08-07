@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>shope</title>
+<style>
+    *{
+        background-color: antiquewhite;
+        color: black;
+}
+</style>
+{% block title %}
+{% endblock %}
+</head>
+
+<body>
+<h2>
+{#    <a href="{% url "files-oppo" %}"> oppo</a>#}
+{#    <a href="{% url 'files-vivo' %}"> vivo</a>#}
+    <a href="{% url "home-page" %}">home</a>
+    <a href="{% url "information-page" %}"> information </a>
+</h2>
+{% block body %}
+    
+{% endblock %}
+</body>
+</html>

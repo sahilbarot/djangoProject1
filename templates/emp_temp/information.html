@@ -1,0 +1,10 @@
+
+{% extends "files/similar.html" %}
+{% block body %}
+    <form action="" method="post">
+    {% csrf_token %}
+    Enter your name : <input type="text" name="name">
+    <input type="submit"><br>
+    <input type="reset">
+    </form>
+{% endblock %}
