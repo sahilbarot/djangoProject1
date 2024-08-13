@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     "frozen.apps.FrozenConfig",
     "local.apps.LocalConfig",
     "mobile.apps.MobileConfig",
-    "employee.apps.EmployeeConfig"
+    "employee.apps.EmployeeConfig",
+    "Student.apps.CustomerConfig"
 ]
 
 MIDDLEWARE = [
