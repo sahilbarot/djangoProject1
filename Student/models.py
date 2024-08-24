@@ -7,4 +7,4 @@ class info(models.Model):
     div = models.CharField(max_length=100)
 
     def __str__(self):
-       return self.roll_no + "-" + self.div + "-" + self.name
+       return str(self.roll_no) + "-" + self.div + "-" + self.name

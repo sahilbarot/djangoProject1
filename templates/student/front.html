@@ -1,0 +1,50 @@
+{% extends "files/similar.html" %}
+{% block title %}
+    <style>
+    table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Add hover effect to table rows */
+tr:hover {
+    background-color: #f5f5f5;
+    
+}
+h1{
+    color: blueviolet;
+    text-align: center;
+    text-decoration-style: solid;
+    
+}
+    </style>
+{% endblock %}
+{% block body %}
+    {% for detail in stu %}
+        <u><h1>information of students</h1></u>
+	<table style="border : 1px solid black; margin: 3px ">
+    <tr>
+        <th>Roll_no</th>
+        <th>Name</th>
+        <th>div</th>
+    </tr>
+    <tr>
+        <td>{{ detail.roll_no }}</td>
+        <td>{{ detail.name }}</td>
+        <td>{{ detail.div }}</td>
+    </tr>
+    
+    </table>
+    {% endfor %} 
+{% endblock %}

@@ -26,4 +26,6 @@ urlpatterns = [
     # path('crocks/',include('local.urls')),
     # path("home/",include("mobile.urls")),
     path("home/",include("employee.urls")),
+    path("index/",include("course.urls")),
+    path("school/",include("Student.urls"))
 ]
