@@ -31,7 +31,7 @@ h1{
     </style>
 {% endblock %}
 {% block body %}
-    {% for detail in stu %}
+    
         <u><h1>information of students</h1></u>
 	<table style="border : 1px solid black; margin: 3px ">
     <tr>
@@ -39,12 +39,13 @@ h1{
         <th>Name</th>
         <th>div</th>
     </tr>
+{% for detail in stu %}
     <tr>
         <td>{{ detail.roll_no }}</td>
         <td>{{ detail.name }}</td>
         <td>{{ detail.div }}</td>
     </tr>
-    
-    </table>
     {% endfor %} 
+    </table>
+    
 {% endblock %}

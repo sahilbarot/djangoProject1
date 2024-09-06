@@ -17,15 +17,21 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 
+
+
 # from frozen.views import home
-# from local.views import *
-from mobile.views import *
+# from lastone.views import *
+# from mobile.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('home/',include("frozen.urls")),
-    # path('crocks/',include('local.urls')),
-    # path("home/",include("mobile.urls")),
-    path("home/",include("employee.urls")),
+    # path('froze/',include("frozen.urls")),
+    path('crocks/',include('local.urls')),
+    path("home/",include("mobile.urls")),
+    path("emp/",include("employee.urls")),
     path("index/",include("course.urls")),
-    path("school/",include("Student.urls"))
-]
+    # path("school/",include("Student.urls")),
+    # path("user/",include("lastone.urls"))
+
+    path("music/",include("music.urls")),
+
+    ]

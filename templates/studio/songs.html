@@ -1,0 +1,9 @@
+{% extends "files/similar.html" %}
+{% block body %}
+    <li>: List of songs :</li>
+    {% for song in git %}
+        <li>
+    <a href="{% url "music-page" 1 %}">{{ song }}</a>
+        </li>
+    {% endfor %}
+{% endblock %}

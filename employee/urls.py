@@ -1,7 +1,8 @@
 from django.urls import path
 from .views import *
-
 urlpatterns = [
-    path("",home,name="home-page"),
-    path("information/",information,name="information-page")
+    path('list/', listofairports, name='view-airport'),
+    path("flights/",flight_home,name="home-flight"),
+    path("flights/<int:flight_id>", flight_details, name="flight-details"),
+
 ]

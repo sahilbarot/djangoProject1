@@ -1,14 +1,25 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render
+from .models import airport,flight,passenger
 
-names = ["parth", "vansh","sarthak"]
 # Create your views here.
-def home(request):
-    return render(request,"emp_temp/home_page.html",{"names":names})
-def information(request):
-    if request.method == "POST":
-        name = request.POST["name1"]
-        print(name)
-        names.append(name)
-        return redirect("home-page")
-    else:
-        return render(request,"emp_temp/information.html")
+def listofairports(request):
+    airports = airport.objects.all()   # select * from airport
+
+    # list(airports)
+    return render(request,"airline/listofairports.html",{"airports":list(airports)})
+#[{"code":1,"city":"Ahme"},{},{}]
+
+def flight_home(request):
+    flights=flight.objects.all()
+
+    return render(request,"airline/FlightHome.html",{"flights":flights})
+
+
+def flight_details(request, flight_id):
+    flightdetail = flight.objects.get(pk=flight_id)
+
+    return render(request, "airline/flightdetail.html",
+                  {
+                      "flight": flightdetail,
+                      "passengers": flightdetail.passengers.all(),
+                  })
