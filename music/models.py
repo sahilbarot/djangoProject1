@@ -9,7 +9,7 @@ class songs(models.Model):
         return self.song_name
 
 class singers(models.Model):
-    singer_Id = models.ManyToManyField(songs,related_name='uniq')
+    singer_Id = models.ManyToManyField(songs,related_name='singer')
     singer_name = models.CharField(max_length=10)
     singer_address = models.CharField(max_length=50)
 

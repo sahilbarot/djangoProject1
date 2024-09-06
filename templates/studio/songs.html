@@ -3,7 +3,7 @@
     <li>: List of songs :</li>
     {% for song in git %}
         <li>
-    <a href="{% url "music-page" 1 %}">{{ song }}</a>
+    <a href="{% url "music-page" songs.id %}">{{ song }}</a>
         </li>
     {% endfor %}
 {% endblock %}

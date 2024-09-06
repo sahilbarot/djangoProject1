@@ -12,5 +12,5 @@ def info(request,songs_id):
     return render(request,"studio/singers.html",
                   {
                       "song":song,
-                      "singer":song.uniq.all()
+                      "singer":song.singer.all()
                    })
