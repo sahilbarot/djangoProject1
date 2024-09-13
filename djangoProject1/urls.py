@@ -33,5 +33,6 @@ urlpatterns = [
     # path("user/",include("lastone.urls"))
 
     path("music/",include("music.urls")),
+    path("classroom/",include("classroom.urls")),
 
     ]

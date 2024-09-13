@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     "employee.apps.EmployeeConfig",
     "Student.apps.CustomerConfig",
     "course.apps.CourseConfig",
-    "music.apps.MusicConfig"
+    "music.apps.MusicConfig",
+    "classroom.apps.ClassroomConfig"
     # "lastone.apps.LastoneConfig"
 ]
 
